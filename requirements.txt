@@ -1,1 +1,3 @@
 SQLAlchemy==1.3.12
+scrapy
+requests
