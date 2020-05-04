@@ -20,15 +20,7 @@ class CornershopPipeline(object):
         engine = create_engine('sqlite:///../db.sqlite')
         self.Session = sessionmaker(bind=engine)
 
-    def open_spider(self, spider):
-        self.file = open('output.txt', 'a')
-
-    def close_spider(self, spider):
-        self.file.close()
-
     def process_item(self, item, spider):
-        line =  json.dumps(dict(item)) + '\n'
-        self.file.write(line)
 
         session = self.Session()
 

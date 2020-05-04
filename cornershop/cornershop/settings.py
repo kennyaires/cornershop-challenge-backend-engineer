@@ -94,4 +94,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+# Splash instance needed, run the following:
+# docker pull scrapinghub/splash
+# docker run -p 8050:8050 -d scrapinghub/splash
 SPLASH_URL = 'http://localhost:8050'
