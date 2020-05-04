@@ -31,8 +31,6 @@ class CornershopPipeline(object):
         self.file.write(line)
 
         session = self.Session()
-        
-        print('******************* reached here.')
 
         # create Product object
         product = Product(
@@ -43,7 +41,9 @@ class CornershopPipeline(object):
             name=item['name'],
             description=item['description'],
             package=item['package'],
-            image_urls=item['image_urls']        
+            image_urls=item['image_urls'] ,
+            category=item['category'],
+            product_url=item['product_url']
         )
 
         # create BranchProduct objects

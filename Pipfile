@@ -9,6 +9,7 @@ verify_ssl = true
 sqlalchemy = "*"
 scrapy = "*"
 requests = "*"
+scrapy-splash = "*"
 
 [requires]
 python_version = "3.7"

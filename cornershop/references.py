@@ -1,10 +1,4 @@
 
-"""
-Only get products from categories below
-"""
-ALLOWED_CATEGORIES = ["Pantry, Household & Pets", "Grocery"],
-
-
 """ 
 Branches information
 
