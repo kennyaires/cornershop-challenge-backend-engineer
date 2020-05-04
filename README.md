@@ -18,6 +18,7 @@ The sqlite3 database has a total of 528 products and 1056 product branches.
 Item example:
 ```
 {"bar_code": "68113191195", "sku": "10052944", "brand": "Great Value", "name": "Great Value Large Eggs", "description": "Great Value Large Eggs. Great Value has the everyday essentials your family needs with guaranteed, money-back quality. From breakfast to baking, Great Value eggs can\u2019t be beat!", "package": "12 Count", "image_urls": "https://i5.walmartimages.ca/images/Large/924/227/6000197924227.jpg,https://i5.walmartimages.ca/images/Enlarge/924/227/6000197924227.jpg", "category": "Grocery|Dairy & Eggs|Eggs", "product_url": "https://www.walmart.ca/en/ip/great-value-large-eggs/10052944"}
+```
 
 ## Before you begin
 
