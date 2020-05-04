@@ -105,7 +105,7 @@ Feel free to **use the Python environment manager of your preference**. We provi
 - GIT repository history
 - Appropriate use of the framework
 
-## Aproach and comments
+# Approach and comments
 The Scrapy project has one spider - WalmartCA.py -, it has three parses: the first one for crawling the xml site-map for categories urls, the second one for the category page on the groceries site and finally, a product parse.
 I ended up using the scrapy-splash library in order to crawl on the groceries website as it its content is generated asynchronously throw javascript. The first parse and the product parse don't use the splash resources. When inquirying the WalmartCA api for product availabily on the store brach, I use the requests library. The splash service can be runned locally inside a docker container:
 
