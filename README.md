@@ -104,3 +104,23 @@ Feel free to **use the Python environment manager of your preference**. We provi
 - Quality of the collected data
 - GIT repository history
 - Appropriate use of the framework
+
+## Aproach and comments
+The Scrapy project has one spider - WalmartCA.py -, it has three parses: the first one for crawling the xml site-map for categories urls, the second one for the category page on the groceries site and finally, a product parse.
+I ended up using the scrapy-splash library in order to crawl on the groceries website as it its content is generated asynchronously throw javascript. The first parse and the product parse don't use the splash resources. When inquirying the WalmartCA api for product availabily on the store brach, I use the requests library. The splash service can be runned locally inside a docker container:
+
+```
+docker pull scrapinghub/splash
+docker run -p 8050:8050 -d scrapinghub/splash
+```
+
+Starting the spider:
+```
+scrapy runspider cornershop/spiders/WalmartCA.py
+```
+
+The sqlite3 database has a total of 528 products and 1056 product branches.
+Item example:
+```
+{"bar_code": "68113191195", "sku": "10052944", "brand": "Great Value", "name": "Great Value Large Eggs", "description": "Great Value Large Eggs. Great Value has the everyday essentials your family needs with guaranteed, money-back quality. From breakfast to baking, Great Value eggs can\u2019t be beat!", "package": "12 Count", "image_urls": "https://i5.walmartimages.ca/images/Large/924/227/6000197924227.jpg,https://i5.walmartimages.ca/images/Enlarge/924/227/6000197924227.jpg", "category": "Grocery|Dairy & Eggs|Eggs", "product_url": "https://www.walmart.ca/en/ip/great-value-large-eggs/10052944"}
+```
